@@ -19,11 +19,10 @@ function padString (str, num, sym, place = true){
     const replacementLength = num - str.length
     const replacement = sym.repeat(replacementLength)
 
-    if (place === false){
+    if (!place) {
         return replacement + str
-    } else {
-        return str + replacement
     }
+    return str + replacement
 }
 
 alert(padString(str, num, sym))
